@@ -98,7 +98,7 @@
                 </li>
                  <li>
                     <a href="./business.php" data-transition="fade" data-theme="a" data-icon="grid">
-                        Business Contacts
+                        Business
                     </a>
                 </li>
             </ul>

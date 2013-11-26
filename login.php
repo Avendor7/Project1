@@ -146,7 +146,7 @@ if (empty($_SESSION['user_id'])) {
                     </h2>
                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                         <fieldset>
-                            <legend>Log In</legend>
+                            
                             <label for="username">Username:</label>
                             <input type="text" name="username" value="<?php if (!empty($user_username)) echo $user_username; ?>" /><br />
                             <label for="password">Password:</label>
