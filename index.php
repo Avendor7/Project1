@@ -21,13 +21,22 @@
   <!-- Extra Codiqa features -->
   <script src="https://d10ajoocuyu32n.cloudfront.net/codiqa.ext.js"></script>
    
+  <!-- Swypejs-->
+  <script src="javascript/swipe.js"></script>
+  <link rel="stylesheet" href="mycss.css">
+
+  <!-- Stephen JavaScript and CSS -->
+  <script src="javascript/myjs.js"></script>
+   <link rel="stylesheet" href="mycss.css">
+   
+   
 </head>
 <body>
 <!-- Home -->
 <div data-role="page" id="page1">
     <div data-theme="a" data-role="header">
         <h3>
-            Contact Me
+            Home
         </h3>
         <div style=" text-align:center">
             <img style="width: 288px; height: 100px" src="./img/logo.png">
@@ -37,18 +46,18 @@
         <div data-role="navbar" data-iconpos="top">
             <ul>
                 <li>
-                    <a href="./index.html" data-transition="fade" data-theme="a" data-icon="home">
+                    <a href="./index.php" data-transition="fade" data-theme="a" data-icon="home"
+                    class="ui-btn-active ui-state-persist">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="./about.html" data-transition="fade" data-theme="a" data-icon="info">
+                    <a href="./about.php" data-transition="fade" data-theme="a" data-icon="info">
                         About Me
                     </a>
                 </li>
                 <li>
-                    <a href="./contacts.html" data-transition="fade" data-theme="a" data-icon="edit"
-                    class="ui-btn-active ui-state-persist">
+                    <a href="./contacts.php" data-transition="fade" data-theme="a" data-icon="edit">
                         Contact
                     </a>
                 </li>
@@ -57,28 +66,43 @@
         <div data-role="navbar" data-iconpos="top">
             <ul>
                 <li>
-                    <a href="./projects.html" data-transition="fade" data-theme="a" data-icon="gear">
+                    <a href="./projects.php" data-transition="fade" data-theme="a" data-icon="gear">
                         Projects
                     </a>
                 </li>
                 <li>
-                    <a href="./services.html" data-transition="fade" data-theme="a" data-icon="check">
+                    <a href="./services.php" data-transition="fade" data-theme="a" data-icon="check">
                         Services
+                    </a>
+                </li>
+                 <li>
+                    <a href="./business.php" data-transition="fade" data-theme="a" data-icon="grid">
+                        Business Contacts
                     </a>
                 </li>
             </ul>
         </div>
         <h2>
-            How to Contact Me
+            Only The Best
         </h2>
+        <!-- image slider that is broken
+        <div id='slider' class='swipe'>
+  <div class='swipe-wrap'>
+      <div><img src="img/gc_weather.jpg" alt="GC Weather"></div>
+    <div><img src="img/nintendo.jpg" alt="GC Weather"></div>
+    <div><img src="img/weather_station.jpg" alt="GC Weather"></div>
+  </div>
+</div>
+        -->
         <h5>
-             <p>Email: <a href="mailto:steve.wiggins7@gmail.com">steve.wiggins7@gmail.com</a></p>
-                                    <p>Facebook: <a href="https://www.facebook.com/steve.wiggins">facebook.com/steve.wiggins</a></p>
-                                    <p>Twitter: <a href="https://www.twitter.com/stevemwiggins">twitter.com/stevemwiggins</a></p>
-                                    <p>Google +: <a href="https://plus.google.com/u/0/103433475841800557672/posts">plus.google.com</a></p>
-                                    <p>GitHub: <a href="https://github.com/step1041/">github.com/step1041</a></p>
-                                    <p>Skype: stevemwiggins</p>
+            I strive to give you the best looking website to present to your visitors
+            as possible. By using current HTML5 and CSS3 languages to bring you a rich,
+            modern web experience.
         </h5>
+        <img src="img/gc_weather.jpg" alt="GC Weather" class = "frontimage">
+        <img src="img/nintendo.jpg" alt="GC Weather" class = "frontimage">
+        <img src="img/weather_station.jpg" alt="GC Weather" class = "frontimage">
+        
     </div>
     <div data-theme="a" data-role="footer" data-position="fixed">
         <h3>

@@ -27,28 +27,27 @@
 <div data-role="page" id="page1">
     <div data-theme="a" data-role="header">
         <h3>
-            About Me
+            Projects
         </h3>
-       <div style=" text-align:center">
+        <div style=" text-align:center">
             <img style="width: 288px; height: 100px" src="./img/logo.png">
         </div>
     </div>
     <div data-role="content">
-      <div data-role="navbar" data-iconpos="top">
+        <div data-role="navbar" data-iconpos="top">
             <ul>
                 <li>
-                    <a href="./index.html" data-transition="fade" data-theme="a" data-icon="home">
+                    <a href="./index.php" data-transition="fade" data-theme="a" data-icon="home">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="./about.html" data-transition="fade" data-theme="a" data-icon="info"
-                    class="ui-btn-active ui-state-persist">
+                    <a href="./about.php" data-transition="fade" data-theme="a" data-icon="info">
                         About Me
                     </a>
                 </li>
                 <li>
-                    <a href="./contacts.html" data-transition="fade" data-theme="a" data-icon="edit">
+                    <a href="./contacts.php" data-transition="fade" data-theme="a" data-icon="edit">
                         Contact
                     </a>
                 </li>
@@ -57,29 +56,30 @@
         <div data-role="navbar" data-iconpos="top">
             <ul>
                 <li>
-                    <a href="./projects.html" data-transition="fade" data-theme="a" data-icon="gear">
+                    <a href="./projects.php" data-transition="fade" data-theme="a" data-icon="gear"
+                    class="ui-btn-active ui-state-persist">
                         Projects
                     </a>
                 </li>
                 <li>
-                    <a href="./services.html" data-transition="fade" data-theme="a" data-icon="check">
+                    <a href="./services.php" data-transition="fade" data-theme="a" data-icon="check">
                         Services
+                    </a>
+                </li>
+                 <li>
+                    <a href="./business.php" data-transition="fade" data-theme="a" data-icon="grid">
+                        Business Contacts
                     </a>
                 </li>
             </ul>
         </div>
         <h2>
-            Hello World
+            Past Projects
         </h2>
-        <img src="img/GC_portrait_about.jpg" alt="Portrait">
-        
-              <p>Stephen Wiggins is currently attending Georgian College in Barrie, Ontario participating in their 3 year Computer Programmer Analyst program.
-                                        <br><br>He is currently working part time at Georgian College in the Centre for Applied Research and Innovation doing web development work awaiting the start of a Winter 2014 co-op
-                                        <br><br>Other past work includes manufacturing at Crystal Fountains in Concord, Ontario during the summers of 2009, 2010, and 2012.
-                                        <br><br>Volunteer experience gained at Victoria Village Manor working in the laundry room in 2009.
-                                        <br><br>Education includes an OSSD from Bear Creek Secondary School in 2012 specializing in business and computer courses.
-                                        <br><br>If you wish to have a look at my <a href="./files/resume.pdf">Resume</a> feel free to do so!</p>
-        
+         <a href="http://webdesign4.georgianc.on.ca/~200219642/Assignment4/index.html">Back to the Future page</a><br><br>
+         <a href="http://webdesign4.georgianc.on.ca/~200219642/abduction/index.php">Endermen Abduction</a><br><br>
+         <a href="http://webdesign4.georgianc.on.ca/~200219642/project1/index.html">Nintendo Project</a><br><br>
+         <a href="http://webdesign4.georgianc.on.ca/~200219642/mobile1/index.html">JQuery Mobile Website</a><br><br>
     </div>
     <div data-theme="a" data-role="footer" data-position="fixed">
         <h3>

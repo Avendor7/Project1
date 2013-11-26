@@ -19,7 +19,11 @@
 }
 
 .frontimage{
-    
     height:150px;
     width:100%;
+}
+#portrait{
+    
+    height:100px; 
+    width:100px;
 }
