@@ -23,7 +23,7 @@ if (!isset($_SESSION['id'])) {
 
             echo mysqli_num_rows($data);
             if (mysqli_num_rows($data) == 1) {
-                // The log-in is OK so set the user ID and username session vars (and cookies), and redirect to the home page
+                // The log-in is OK so set the user ID and username session vars (and cookies), and redirect to the business page
 
                 $row = mysqli_fetch_array($data);
                 $_SESSION['id'] = $row['id'];
@@ -43,12 +43,9 @@ if (!isset($_SESSION['id'])) {
     }
 }
 
-// Insert the page header
-$page_title = 'Log In';
-
 
 // If the session var is empty, show any error message and the log-in form; otherwise confirm the log-in
-if (empty($_SESSION['user_id'])) {
+if (empty($_SESSION['id'])) {
     echo '<p class="error">' . $error_msg . '</p>';
     ?>
 
