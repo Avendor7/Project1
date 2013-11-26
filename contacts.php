@@ -1,3 +1,10 @@
+<?php
+  // Start the session
+  require_once('startsession.php');
+  
+  require_once('connectvars.php'); // database username and password files
+  
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,6 +41,20 @@
         </div>
     </div>
     <div data-role="content">
+         <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="./login.php" data-transition="fade" data-theme="a">
+                        Login
+                    </a>
+                </li>
+                <li>
+                    <a href="./logout.php" data-transition="fade" data-theme="a">
+                       <?php echo("Log Out: " . $_SESSION['username'] ) ?>
+                    </a>
+                </li>
+            </ul>
+        </div>
        <div data-role="navbar" data-iconpos="top">
             <ul>
                 <li>

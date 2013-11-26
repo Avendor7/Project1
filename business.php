@@ -1,3 +1,21 @@
+<?php
+  // Start the session
+  require_once('startsession.php');
+  
+  require_once('connectvars.php'); // database username and password files
+  
+
+  // Connect to the database 
+  $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME); 
+  
+  // check and see if user is logged in
+  if (!isset($_SESSION['id'])) {
+    echo '<p class="login">Please <a href="login.php">log in</a> to access this page.    USERNAME IS: stephen   PASSWORD IS: password </p>';
+    
+    exit();
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,13 +45,27 @@
 <div data-role="page" id="page1">
     <div data-theme="a" data-role="header">
         <h3>
-            Contact Me
+            Business Contacts
         </h3>
         <div style=" text-align:center">
             <img style="width: 288px; height: 100px" src="./img/logo.png">
         </div>
     </div>
     <div data-role="content">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="./login.php" data-transition="fade" data-theme="a">
+                        Login
+                    </a>
+                </li>
+                <li>
+                    <a href="./logout.php" data-transition="fade" data-theme="a">
+                       <?php echo("Log Out: " . $_SESSION['username'] ) ?>
+                    </a>
+                </li>
+            </ul>
+        </div>
        <div data-role="navbar" data-iconpos="top">
             <ul>
                 <li>
@@ -47,8 +79,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./contacts.php" data-transition="fade" data-theme="a" data-icon="edit"
-                    class="ui-btn-active ui-state-persist">
+                    <a href="./contacts.php" data-transition="fade" data-theme="a" data-icon="edit">
                         Contact
                     </a>
                 </li>
@@ -67,8 +98,9 @@
                     </a>
                 </li>
                  <li>
-                    <a href="./business.php" data-transition="fade" data-theme="a" data-icon="grid">
-                        Business Contacts
+                    <a href="./business.php" data-transition="fade" data-theme="a" data-icon="grid"
+                    class="ui-btn-active ui-state-persist">
+                        Business
                     </a>
                 </li>
             </ul>

@@ -53,139 +53,117 @@ if (empty($_SESSION['user_id'])) {
     ?>
 
     <!DOCTYPE html>
-    <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-    <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <html>
         <head>
-            <meta charset="utf-8" />
+            <meta charset="utf-8">
+            <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black">
+            <title></title>
 
-            <!-- Set the viewport width to device width for mobile -->
-            <meta name="viewport" content="width=device-width" />
 
-            <title>Stephen Wiggins</title>
 
-            <link rel="stylesheet" href="css/normalize.css">
-            <link rel="stylesheet" href="css/foundation.css">
+            <link rel="stylesheet" href="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
 
-            <script src="js/vendor/custom.modernizr.js"></script>
+            <!-- Extra Codiqa features -->
+            <link rel="stylesheet" href="codiqa.ext.css">
+
+            <!-- jQuery and jQuery Mobile -->
+            <script src="https://d10ajoocuyu32n.cloudfront.net/jquery-1.9.1.min.js"></script>
+            <script src="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+
+            <!-- Extra Codiqa features -->
+            <script src="https://d10ajoocuyu32n.cloudfront.net/codiqa.ext.js"></script>
 
         </head>
         <body>
-            <div class="row">
-                <div class="large-12 columns">
-
-                    <!-- Navigation -->
-
-                    <nav class="top-bar">
-                        <ul class="title-area">
-                            <!-- Title Area -->
-                            <li class="name">
-                                <h1>
-                                    <a href="./index.php">SW</a>
-                                </h1>
+            <!-- Home -->
+            <div data-role="page" id="page1">
+                <div data-theme="a" data-role="header">
+                    <h3>
+                        Contact Me
+                    </h3>
+                    <div style=" text-align:center">
+                        <img style="width: 288px; height: 100px" src="./img/logo.png">
+                    </div>
+                </div>
+                <div data-role="content">
+                    <div data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li>
+                                <a href="./login.php" data-transition="fade" data-theme="a"
+                                   class="ui-btn-active ui-state-persist">
+                                    Login
+                                </a>
                             </li>
-                            <li class="toggle-topbar menu-icon"><a href="index.html"><span>menu</span></a></li>
+                            <li>
+                                <a href="./logout.php" data-transition="fade" data-theme="a">
+                                    <?php echo("Log Out: " . $_SESSION['username'] ) ?>
+                                </a>
+                            </li>
                         </ul>
-
-                        <section class="top-bar-section">
-                            <ul class="left">
-                                <li class=""><a href="./projects.php">Projects</a></li>
-                                <li class=""><a href="./services.php">Services</a></li>
-                                <li class=""><a href="./about.php">About Me</a></li>
-                                <li class=""><a href="./contact.php">Contact Me</a></li>
-                                <li class=""><a href="./business.php">Business Contacts</a></li>
-                                <li class=""><a href="./links.php">Links</a></li>
-                            </ul>
-                            <ul class ="right">
-                                <li class=""><a href="./login.php">Login</a></li>
-                                <li class=""><a href="./logout.php"><?php echo("Log Out: " . $_SESSION['username'] ) ?></a></li>
-                            </ul>
-                        </section>
-                    </nav>
-
-                    <!-- End Navigation -->
-
+                    </div>
+                    <div data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li>
+                                <a href="./index.php" data-transition="fade" data-theme="a" data-icon="home">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./about.php" data-transition="fade" data-theme="a" data-icon="info">
+                                    About Me
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./contacts.php" data-transition="fade" data-theme="a" data-icon="edit">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li>
+                                <a href="./projects.php" data-transition="fade" data-theme="a" data-icon="gear">
+                                    Projects
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./services.php" data-transition="fade" data-theme="a" data-icon="check">
+                                    Services
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./business.php" data-transition="fade" data-theme="a" data-icon="grid">
+                                    Business Contacts
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h2>
+                        How to Contact Me
+                    </h2>
+                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                        <fieldset>
+                            <legend>Log In</legend>
+                            <label for="username">Username:</label>
+                            <input type="text" name="username" value="<?php if (!empty($user_username)) echo $user_username; ?>" /><br />
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" />
+                        </fieldset>
+                        <input type="submit" value="Log In" name="submit" />
+                    </form>
+                </div>
+                <div data-theme="a" data-role="footer" data-position="fixed">
+                    <h3>
+                        Copyright 2013
+                    </h3>
                 </div>
             </div>
-
-
-            <div class="row">
-                <div class="large-12 columns">
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <div class="row">
-
-                                <!-- Content -->
-
-                                <div class="large-12 columns">
-
-                                    <div class="panel radius">
-
-                                        <div class="row">
-                                            <!-- PAGE CONTENT -->
-                                            <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                                                <fieldset>
-                                                    <legend>Log In</legend>
-                                                    <label for="username">Username:</label>
-                                                    <input type="text" name="username" value="<?php if (!empty($user_username)) echo $user_username; ?>" /><br />
-                                                    <label for="password">Password:</label>
-                                                    <input type="password" name="password" />
-                                                </fieldset>
-                                                <input type="submit" value="Log In" name="submit" />
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- End Content -->
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div><br>
-
-
-
-            <!-- Footer -->
-
-            <footer class="row">
-                <div class="large-12 columns">
-                    <hr>
-                    <div class="row">
-                        <div class="large-6 columns">
-                            <p>&copy; Copyright Stephen Wiggins 2013</p>
-                        </div>
-                        <div class="large-6 columns">
-                            <ul class="inline-list right">
-                                <li><a href="https://www.facebook.com/steve.wiggins">Facebook</a></li>
-                                <li><a href="https://twitter.com/stevemwiggins">Twitter</a></li>
-                                <li><a href="https://github.com/step1041/">GitHub</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-            <script>
-                document.write('<script src=js/vendor/' +
-                        ('__proto__' in {} ? 'zepto' : 'jquery') +
-                        '.js><\/script>')
-            </script>
-            <script src="js/foundation.min.js"></script>
-            <script>
-                $(document).foundation();
-            </script>
-            <script type="text/javascript">
-                $(window).load(function() {
-                    $('#featured').orbit({fluid: '2x1'});
-                });
-            </script>
-            <!-- End Footer -->
-
         </body>
     </html>
+
     <?php
 }
 else {
